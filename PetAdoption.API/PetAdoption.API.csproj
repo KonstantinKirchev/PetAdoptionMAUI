@@ -13,5 +13,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PetAdoption.Shared\PetAdoption.Shared.csproj" />
+  </ItemGroup>
 
 </Project>
