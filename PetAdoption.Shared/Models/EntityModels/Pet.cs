@@ -31,9 +31,9 @@
 
         public int Views { get; set; }
 
-        public AdoptionStatus AdoptionStatus { get; set; }
+        public AdoptionStatus AdoptionStatus { get; set; } = AdoptionStatus.Available;
 
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 
 }
