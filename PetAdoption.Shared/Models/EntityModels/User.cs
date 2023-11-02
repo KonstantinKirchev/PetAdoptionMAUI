@@ -1,8 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace PetAdoption.Shared.Models.EntityModels
+﻿namespace PetAdoption.Shared.Models.EntityModels
 {
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.ComponentModel.DataAnnotations;
     public class User
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -14,11 +13,14 @@ namespace PetAdoption.Shared.Models.EntityModels
         [Required, MaxLength(100)]
         public string Email { get; set; }
 
-        [Required, MaxLength(10)]
-        public string Salt { get; set; }
+        //[Required, MaxLength(10)]
+        //public string Salt { get; set; }
 
-        [Required, MaxLength(80)]
-        public string Hash { get; set; }
+        //[Required, MaxLength(80)]
+        //public string Hash { get; set; }
+
+        [Required, MaxLength(10)]
+        public string Password { get; set; }
 
     }
 }
