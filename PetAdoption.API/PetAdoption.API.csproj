@@ -23,6 +23,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Services\Interfaces\" />
+  </ItemGroup>
 </Project>
