@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetAdoption.API.Data;
+using PetAdoption.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,11 @@ builder.Services.AddDbContext<PetContext>(
     options => options.UseSqlServer(builder.Configuration.GetConnectionString("Pet")), 
     ServiceLifetime.Transient
 );
+
+builder.Services.AddTransient<AuthService>()
+                .AddTransient<TokenService>()
+                .AddTransient<PetService>()
+                .AddTransient<UserPetService>();
   
 var app = builder.Build();
 
