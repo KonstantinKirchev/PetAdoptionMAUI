@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetAdoption.API.Data;
 using PetAdoption.API.Services;
+using PetAdoption.API.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,10 +17,10 @@ builder.Services.AddDbContext<PetContext>(
     ServiceLifetime.Transient
 );
 
-builder.Services.AddTransient<AuthService>()
+builder.Services.AddTransient<IAuthService, AuthService>()
                 .AddTransient<TokenService>()
-                .AddTransient<PetService>()
-                .AddTransient<UserPetService>();
+                .AddTransient<IPetService, PetService>()
+                .AddTransient<IUserPetService, UserPetService>();
 
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
