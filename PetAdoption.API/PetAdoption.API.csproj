@@ -25,10 +25,12 @@
     <Folder Include="wwwroot\images\" />
     <Folder Include="Services\Interfaces\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Services\Interfaces\" />
     <None Remove="Extensions\" />
+    <None Remove="Controllers\" />
   </ItemGroup>
 </Project>
