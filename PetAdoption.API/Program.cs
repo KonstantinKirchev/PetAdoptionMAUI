@@ -20,7 +20,9 @@ builder.Services.AddTransient<AuthService>()
                 .AddTransient<TokenService>()
                 .AddTransient<PetService>()
                 .AddTransient<UserPetService>();
-  
+
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
