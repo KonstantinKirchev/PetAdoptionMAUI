@@ -31,12 +31,12 @@ namespace PetAdoption.API.Controllers
             await _userPetService.GetUserFavoritesAsync(UserId);
 
         // POST: api/user/favorites/1
-        [HttpPost("favorites/{petId: int}")]
+        [HttpPost("favorites/{petId:int}")]
         public async Task<ApiResponse> ToggleFavoritesAsync(int petId) =>
             await _userPetService.ToggleFavoritesAsync(UserId, petId);
 
         // POST: api/user/adopt/1
-        [HttpPost("adopt/{petId: int}")]
+        [HttpPost("adopt/{petId:int}")]
         public async Task<ApiResponse> AdoptPetAsync(int petId) =>
             await _userPetService.AdoptPetAsync(UserId, petId);
     }
