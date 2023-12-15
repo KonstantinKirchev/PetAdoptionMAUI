@@ -1,8 +1,8 @@
 namespace PetAdoption.Mobile.Pages;
 
-public partial class Home : ContentPage
+public partial class HomePage : ContentPage
 {
-	public Home()
+	public HomePage()
 	{
 		InitializeComponent();
 	}
