@@ -14,14 +14,14 @@
     <ShellContent
         ContentTemplate="{DataTemplate pages:OnboardingPage}"
         Route="OnboardingPage"
-        Shell.NavBarHasShadow="False"
+        Shell.NavBarIsVisible="False"
         Shell.TabBarIsVisible="False"/>
 
     <ShellContent
         Title=""
         ContentTemplate="{DataTemplate pages:LoginRegisterPage}"
         Route="LoginRegisterPage"
-        Shell.NavBarHasShadow="False"
+        Shell.NavBarIsVisible="False"
         Shell.TabBarIsVisible="False"/>
 
     <TabBar>
