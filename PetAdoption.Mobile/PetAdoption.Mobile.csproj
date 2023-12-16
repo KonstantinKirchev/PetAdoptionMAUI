@@ -103,4 +103,7 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\img_3.jpg" />
+	</ItemGroup>
 </Project>
