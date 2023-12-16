@@ -9,7 +9,8 @@
     Shell.FlyoutBehavior="Disabled">
 
     <Shell.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"/>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"
+                                   StatusBarStyle="LightContent"/>
     </Shell.Behaviors>
 
     <ShellContent
