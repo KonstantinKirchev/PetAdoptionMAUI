@@ -45,7 +45,8 @@
                     CornerRadius="15"
                     Padding="0, 15"
                     FontSize="20"
-                    FontAttributes="Bold"/>
+                    FontAttributes="Bold"
+                    Clicked="Explore_Button_Clicked"/>
         </Grid>
     </Grid>
 </ContentPage>
