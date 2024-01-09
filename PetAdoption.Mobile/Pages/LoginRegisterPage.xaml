@@ -42,9 +42,19 @@
                         TextDecorations="Underline"
                         BackgroundColor="White"/>
                 </Grid>
-
+                <VerticalStackLayout Spacing="10">
+                    <Entry Placeholder="Name"
+                           PlaceholderColor="{StaticResource Primary}"/>
+                    <Entry Placeholder="Email"
+                           PlaceholderColor="{StaticResource Primary}"
+                           Keyboard="Email"/>
+                    <Entry Placeholder="Password"
+                           PlaceholderColor="{StaticResource Primary}"
+                           IsPassword="True"/>
+                    <Button Text="Login"
+                            Style="{StaticResource btnPrimary}"/>
+                </VerticalStackLayout>
             </VerticalStackLayout>
-
         </ScrollView>
     </Grid>
 </ContentPage>
