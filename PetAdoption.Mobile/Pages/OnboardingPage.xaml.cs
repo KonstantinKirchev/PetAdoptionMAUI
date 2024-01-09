@@ -11,6 +11,6 @@ public partial class OnboardingPage : ContentPage
 
 	private async void Explore_Button_Clicked(object sender, EventArgs e)
 	{
-		await Shell.Current.GoToAsync($"//{nameof(LoginRegisterPage)}");
+		await Shell.Current.GoToAsync($"//{nameof(LoginRegisterPage)}?{nameof(LoginRegisterViewModel.IsFirstTime)}={true}");
 	}
 }
