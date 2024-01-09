@@ -1,9 +1,4 @@
-﻿using CommunityToolkit.Maui.Alerts;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using PetAdoption.Mobile.Pages;
-
-namespace PetAdoption.Mobile.Models.ViewModels
+﻿namespace PetAdoption.Mobile.Models.ViewModels
 {
 	[QueryProperty(nameof(IsFirstTime), nameof(IsFirstTime))]
 	public partial class LoginRegisterViewModel : ObservableObject

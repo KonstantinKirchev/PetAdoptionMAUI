@@ -1,6 +1,4 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace PetAdoption.Mobile.Models
+﻿namespace PetAdoption.Mobile.Models
 {
 	public partial class LoginRegisterModel : ObservableObject
 	{
