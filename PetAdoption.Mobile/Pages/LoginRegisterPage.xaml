@@ -34,7 +34,15 @@
                         Text="Login"
                         FontSize="40"
                         FontAttributes="Bold"
-                        LineHeight="1.2"/>
+                        LineHeight="1.2">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                         Binding="{Binding IsRegistrationMode}"
+                                         Value="True">
+                                <Setter Property="Text" Value="Register"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
                     <Label
                         Grid.Column="1"
                         Padding="5"
@@ -44,11 +52,24 @@
                         FontSize="15"
                         FontAttributes="Bold"
                         TextDecorations="Underline"
-                        BackgroundColor="White"/>
+                        BackgroundColor="White">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                         Binding="{Binding IsRegistrationMode}"
+                                         Value="True">
+                                <Setter Property="Text" Value="Switch to Login"/>
+                            </DataTrigger>
+                        </Label.Triggers>
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ToggleModeCommand}"/>
+                        </Label.GestureRecognizers>
+
+                    </Label>
                 </Grid>
                 <VerticalStackLayout Spacing="10">
                     <Entry Placeholder="Name"
-                           PlaceholderColor="{StaticResource Primary}"/>
+                           PlaceholderColor="{StaticResource Primary}"
+                           IsVisible="{Binding IsRegistrationMode}"/>
                     <Entry Placeholder="Email"
                            PlaceholderColor="{StaticResource Primary}"
                            Keyboard="Email"/>
@@ -56,7 +77,15 @@
                            PlaceholderColor="{StaticResource Primary}"
                            IsPassword="True"/>
                     <Button Text="Login"
-                            Style="{StaticResource btnPrimary}"/>
+                            Style="{StaticResource btnPrimary}">
+                        <Button.Triggers>
+                            <DataTrigger TargetType="Button"
+                                         Binding="{Binding IsRegistrationMode}"
+                                         Value="True">
+                                <Setter Property="Text" Value="Register"/>
+                            </DataTrigger>
+                        </Button.Triggers>
+                    </Button>
                 </VerticalStackLayout>
                 <Grid ColumnDefinitions="*, Auto, *"
                       ColumnSpacing="5">
@@ -67,7 +96,8 @@
                             Text="Skip for now"
                             HorizontalOptions="Center"
                             Padding="25, 5"
-                            HeightRequest="30"/>
+                            HeightRequest="30"
+                            Command="{Binding SkipForNowCommand}"/>
                     <BoxView Grid.Column="2"
                              HeightRequest="1"
                              Color="{StaticResource Primary}"/>
