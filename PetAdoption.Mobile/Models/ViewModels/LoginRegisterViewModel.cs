@@ -7,7 +7,7 @@
 		private bool _isRegistrationMode;
 
 		[ObservableProperty]
-		private LoginRegisterModel _model; 
+		private LoginRegisterModel _model = new(); 
 
 		[ObservableProperty]
 		private bool? _isFirstTime;
