@@ -1,7 +1,7 @@
 ﻿namespace PetAdoption.Mobile.Models.ViewModels
 {
 	[QueryProperty(nameof(IsFirstTime), nameof(IsFirstTime))]
-	public partial class LoginRegisterViewModel : ObservableObject
+	public partial class LoginRegisterViewModel : BaseViewModel
 	{
 		[ObservableProperty]
 		private bool _isRegistrationMode;
@@ -11,9 +11,6 @@
 
 		[ObservableProperty]
 		private bool _isFirstTime;
-
-		[ObservableProperty]
-		private bool _isBusy;
 
         partial void OnIsFirstTimeChanging(bool value)
         {
@@ -26,14 +23,14 @@
 
 		[RelayCommand]
 		private async Task SkipForNow() =>
-			await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+			await GoToAsync($"//{nameof(HomePage)}");
 
 		[RelayCommand]
 		private async Task Submit()
 		{
 			if (!Model.Validate(IsRegistrationMode))
 			{
-				await Toast.Make("All fields are required").Show();
+				await ShowToastAsync("All fields are required");
 				return;
 			}
 
