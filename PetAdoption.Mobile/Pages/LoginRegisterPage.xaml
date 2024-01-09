@@ -69,15 +69,19 @@
                 <VerticalStackLayout Spacing="10">
                     <Entry Placeholder="Name"
                            PlaceholderColor="{StaticResource Primary}"
-                           IsVisible="{Binding IsRegistrationMode}"/>
+                           IsVisible="{Binding IsRegistrationMode}"
+                           Text="{Binding Model.Name}"/>
                     <Entry Placeholder="Email"
                            PlaceholderColor="{StaticResource Primary}"
-                           Keyboard="Email"/>
+                           Keyboard="Email"
+                           Text="{Binding Model.Email}"/>
                     <Entry Placeholder="Password"
                            PlaceholderColor="{StaticResource Primary}"
-                           IsPassword="True"/>
+                           IsPassword="True"
+                           Text="{Binding Model.Password}"/>
                     <Button Text="Login"
-                            Style="{StaticResource btnPrimary}">
+                            Style="{StaticResource btnPrimary}"
+                            Command="{Binding SubmitCommand}">
                         <Button.Triggers>
                             <DataTrigger TargetType="Button"
                                          Binding="{Binding IsRegistrationMode}"
