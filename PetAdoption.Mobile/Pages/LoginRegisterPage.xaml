@@ -54,6 +54,21 @@
                     <Button Text="Login"
                             Style="{StaticResource btnPrimary}"/>
                 </VerticalStackLayout>
+                <Grid ColumnDefinitions="*, Auto, *"
+                      ColumnSpacing="5">
+                    <BoxView Grid.Column="0"
+                             HeightRequest="1"
+                             Color="{StaticResource Primary}"/>
+                    <Button Grid.Column="1"
+                            Text="Skip for now"
+                            HorizontalOptions="Center"
+                            Padding="25, 5"
+                            HeightRequest="30"/>
+                    <BoxView Grid.Column="2"
+                             HeightRequest="1"
+                             Color="{StaticResource Primary}"/>
+
+                </Grid>
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
