@@ -10,18 +10,18 @@
 		private LoginRegisterModel _model = new(); 
 
 		[ObservableProperty]
-		private bool? _isFirstTime;
+		private bool _isFirstTime;
 
 		[ObservableProperty]
 		private bool _isBusy;
 
-		public void Initialize()
-		{
-			if(IsFirstTime.HasValue && IsFirstTime.Value)
-				IsRegistrationMode = true;
-		}
+        partial void OnIsFirstTimeChanging(bool value)
+        {
+            if (value)
+                IsRegistrationMode = true;
+        }
 
-		[RelayCommand]
+        [RelayCommand]
 		private void ToggleMode() => IsRegistrationMode = !IsRegistrationMode;
 
 		[RelayCommand]
