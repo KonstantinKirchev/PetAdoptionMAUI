@@ -7,6 +7,7 @@
              Title=""
              BackgroundColor="{StaticResource BgColor}"
              x:DataType="vm:LoginRegisterViewModel">
+
     <Grid RowDefinitions="2*, 3*">
         <Border Grid.Row="0"
                 StrokeShape="RoundRectangle 150"
@@ -74,5 +75,12 @@
                 </Grid>
             </VerticalStackLayout>
         </ScrollView>
+        <ActivityIndicator VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           IsRunning="{Binding IsBusy}"
+                           Color="{StaticResource Primary}"
+                           HeightRequest="30"
+                           WidthRequest="30"/>
     </Grid>
+
 </ContentPage>
