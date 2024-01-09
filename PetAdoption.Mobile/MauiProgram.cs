@@ -20,8 +20,15 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+		RegisterAppDependencies(builder.Services);
 
 		return builder.Build();
+	}
+
+	static void RegisterAppDependencies(IServiceCollection services)
+	{
+		services.AddTransient<LoginRegisterViewModel>()
+				.AddTransient<LoginRegisterPage>();
 	}
 }
 
