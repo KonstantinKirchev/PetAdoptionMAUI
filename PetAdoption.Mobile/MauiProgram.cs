@@ -2,6 +2,7 @@
 using CommunityToolkit.Maui;
 using Refit;
 using PetAdoption.Shared;
+using PetAdoption.Mobile.Services.Interfaces;
 
 namespace PetAdoption.Mobile;
 
@@ -32,13 +33,31 @@ public static class MauiProgram
 	static void RegisterAppDependencies(IServiceCollection services)
 	{
 		services.AddTransient<LoginRegisterViewModel>()
-				.AddTransient<LoginRegisterPage>();
+				.AddTransient<LoginRegisterPage>()
+				.AddTransient<AuthService>()
+				.AddSingleton<CommonService>();
 	}
 
 	static void ConfigureRefit(IServiceCollection services)
 	{
 		services.AddRefitClient<IAuthApiService>()
-			.ConfigureHttpClient(httpClient => httpClient.BaseAddress = new Uri(AppConstants.BaseApiUrl));
-	}
+			.ConfigureHttpClient(SetHttpClient);
+
+        services.AddRefitClient<IPetsApiService>()
+            .ConfigureHttpClient(SetHttpClient);
+
+		services.AddRefitClient<IUserPetApiService>(serviceProvider =>
+			{
+				var commonService = serviceProvider.GetRequiredService<CommonService>();
+
+				return new RefitSettings()
+				{
+					AuthorizationHeaderValueGetter = (_, __) => Task.FromResult(commonService.Token ?? string.Empty)
+				};
+			})
+			.ConfigureHttpClient(SetHttpClient);
+    }
+
+	static void SetHttpClient(HttpClient httpClient) => httpClient.BaseAddress = new Uri(AppConstants.BaseApiUrl);
 }
 
