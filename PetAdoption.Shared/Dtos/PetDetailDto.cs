@@ -6,12 +6,12 @@ namespace PetAdoption.Shared.Dtos;
 public class PetDetailDto : PetListDto
 {
     public bool IsFavorite { get; set; }
-    public string Description { get; set; }
+    public string? Description { get; set; }
     public Gender Gender { get; set; }
     public DateTime DateOfBirth { get; set; }
     public AdoptionStatus AdoptionStatus { get; set; }
     public string GenderDisplay => Gender.ToString();
-    public string GenderImage => Gender switch { Gender.Male => "male", Gender.Female => "female" };
+    public string GenderImage => Gender switch { Gender.Male => "male", Gender.Female => "female", _ => "" };
     public string Age
     {
         get
