@@ -50,7 +50,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run("http://localhost:7055");
+app.Run("https://localhost:7055");
 
 static void ApplyDbMigrations(IServiceProvider serviceProvider)
 {
