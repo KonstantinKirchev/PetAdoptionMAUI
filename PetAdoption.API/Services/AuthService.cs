@@ -33,7 +33,7 @@ namespace PetAdoption.API.Services
 
         public async Task<ApiResponse<AuthResponseDto>> RegisterAsync(RegisterRequestDto dto)
         {
-            var existingUser = _context.Users.FirstOrDefaultAsync(user => user.Email == dto.Email);
+            var existingUser = await _context.Users.FirstOrDefaultAsync(user => user.Email == dto.Email);
 
             if (existingUser is not null)
                 return ApiResponse<AuthResponseDto>.Fail("This user already exist");
