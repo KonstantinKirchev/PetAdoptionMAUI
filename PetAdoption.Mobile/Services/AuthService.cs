@@ -16,24 +16,32 @@ namespace PetAdoption.Mobile.Services
 
         public async Task<bool> LoginRegisterAsync(LoginRegisterModel model)
         {
-            ApiResponse<AuthResponseDto> apiResponse;
+            ApiResponse<AuthResponseDto> apiResponse = null;
             
-            if (model.IsNewUser)
+            try
             {
-                apiResponse = await _authApiService.RegisterAsync(new RegisterRequestDto
+                if (model.IsNewUser)
                 {
-                    Name = model.Name,
-                    Email = model.Email,
-                    Password = model.Password
-                });
+                    apiResponse = await _authApiService.RegisterAsync(new RegisterRequestDto
+                    {
+                        Name = model.Name,
+                        Email = model.Email,
+                        Password = model.Password
+                    });
+                }
+                else
+                {
+                    apiResponse = await _authApiService.LoginAsync(new LoginRequestDto
+                    {
+                        Email = model.Email,
+                        Password = model.Password
+                    });
+                }
             }
-            else
+            catch (Refit.ApiException ex)
             {
-                apiResponse = await _authApiService.LoginAsync(new LoginRequestDto
-                {
-                    Email = model.Email,
-                    Password = model.Password
-                });
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                return false;
             }
 
             if (!apiResponse.IsSuccess)
