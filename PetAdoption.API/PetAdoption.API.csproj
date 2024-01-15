@@ -22,7 +22,6 @@
     <ProjectReference Include="..\PetAdoption.Shared\PetAdoption.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
     <Folder Include="Services\Interfaces\" />
     <Folder Include="Extensions\" />
     <Folder Include="Controllers\" />

@@ -1,4 +1,5 @@
-﻿using PetAdoption.Shared.Dtos;
+﻿using PetAdoption.Shared;
+using PetAdoption.Shared.Dtos;
 using PetAdoption.Shared.Models.EntityModels;
 
 namespace PetAdoption.API.Extensions
@@ -12,12 +13,11 @@ namespace PetAdoption.API.Extensions
                 AdoptionStatus = p.AdoptionStatus,
 				Breed = p.Breed,
 				DateOfBirth = p.DateOfBirth,
-				Image = p.Image,
+				Image = $"{AppConstants.BaseApiUrl}/images/{p.Image}",
 				Description = p.Description,
 				Gender = p.Gender,
 				Name = p.Name,
-				Price = p.Price,
-				 
+				Price = p.Price
 			};
 	}
 }
