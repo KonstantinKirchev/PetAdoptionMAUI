@@ -21,6 +21,9 @@ namespace PetAdoption.Mobile.Models.ViewModels
         [ObservableProperty]
         private IEnumerable<PetListDto> _randomPets = Enumerable.Empty<PetListDto>();
 
+        [ObservableProperty]
+        private string _userName = "Stranger";
+
         private bool _isInitialized;
 
         public async Task InitializeAsync()
@@ -32,6 +35,7 @@ namespace PetAdoption.Mobile.Models.ViewModels
 
             try
             {
+                await Task.Delay(100);
                 var newlyAddedPetsTask = _petsApiService.GetNewlyAddedPetsAsync(5);
                 var popularPetsTask = _petsApiService.GetPopularPetsAsync(10);
                 var randomPetsTask = _petsApiService.GetRandomPetsAsync(6);
