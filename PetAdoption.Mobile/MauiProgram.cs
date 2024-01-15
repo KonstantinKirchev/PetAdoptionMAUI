@@ -35,7 +35,9 @@ public static class MauiProgram
 		services.AddTransient<LoginRegisterViewModel>()
 				.AddTransient<LoginRegisterPage>()
 				.AddTransient<AuthService>()
-				.AddSingleton<CommonService>();
+				.AddSingleton<CommonService>()
+                .AddSingleton<HomeViewModel>()
+                .AddSingleton<HomePage>();
 	}
 
 	static void ConfigureRefit(IServiceCollection services)
