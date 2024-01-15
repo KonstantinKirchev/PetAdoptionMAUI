@@ -5,4 +5,6 @@ global using PetAdoption.Mobile.Models;
 global using PetAdoption.Mobile.Models.ViewModels;
 global using PetAdoption.Mobile.Pages;
 global using PetAdoption.Mobile.Services;
+global using PetAdoption.Shared.Dtos;
+global using PetAdoption.Shared.Enumerations;
 
