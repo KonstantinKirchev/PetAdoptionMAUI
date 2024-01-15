@@ -20,7 +20,7 @@
         protected async Task ShowToastAsync(string message) =>
             await Toast.Make(message).Show();
 
-        protected async Task ShowAlertAsync(string title, string message, string buttonText) =>
+        protected async Task ShowAlertAsync(string title, string message, string buttonText = "Ok") =>
             await App.Current.MainPage.DisplayAlert(title, message, buttonText);
 
         protected async Task ShowConfirmAsync(string title, string message, string okButtonText, string cancelButtonText) =>
