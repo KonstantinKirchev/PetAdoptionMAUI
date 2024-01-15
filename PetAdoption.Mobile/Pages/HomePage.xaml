@@ -5,7 +5,7 @@
              xmlns:models="clr-namespace:PetAdoption.Mobile.Models"
              xmlns:dtos="clr-namespace:PetAdoption.Shared.Dtos;assembly=PetAdoption.Shared"
              x:Class="PetAdoption.Mobile.Pages.HomePage"
-             Title="Home"
+             Shell.NavBarIsVisible="False"
              x:DataType="vm:HomeViewModel">
     <VerticalStackLayout>
         <Label 
