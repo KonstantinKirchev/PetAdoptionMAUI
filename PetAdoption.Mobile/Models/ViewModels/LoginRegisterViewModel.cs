@@ -47,10 +47,7 @@ namespace PetAdoption.Mobile.Models.ViewModels
 			//Make API call to login/register user
 			var status = await _authService.LoginRegisterAsync(Model);
 			if (status)
-			{
                 await SkipForNow();
-
-            }
             IsBusy = false;
 		}
 	}  
