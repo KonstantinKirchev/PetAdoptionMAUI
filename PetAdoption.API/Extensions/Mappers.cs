@@ -11,7 +11,7 @@ namespace PetAdoption.API.Extensions
 			{
                 Id = p.Id,
                 AdoptionStatus = p.AdoptionStatus,
-				Breed = p.Breed,
+				Breed = p.Breed ?? string.Empty,
 				DateOfBirth = p.DateOfBirth,
 				Image = $"{AppConstants.BaseApiUrl}/images/{p.Image}",
 				Description = p.Description,

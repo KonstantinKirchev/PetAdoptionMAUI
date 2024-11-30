@@ -1,7 +1,5 @@
-﻿
+﻿namespace PetAdoption.Shared.Dtos;
 using PetAdoption.Shared.Enumerations;
-
-namespace PetAdoption.Shared.Dtos;
 
 public class PetDetailDto : PetListDto
 {

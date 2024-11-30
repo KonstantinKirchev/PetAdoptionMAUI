@@ -1,9 +1,8 @@
-﻿namespace PetAdoption.Shared.Enumerations
+﻿namespace PetAdoption.Shared.Enumerations;
+public enum AdoptionStatus
 {
-    public enum AdoptionStatus
-    {
-        Available = 1,
-        InProgress = 0,
-        Adopted = 2
-    }
+    InProgress,
+    Available,
+    Adopted
 }
+

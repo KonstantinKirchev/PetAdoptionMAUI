@@ -1,8 +1,7 @@
-﻿namespace PetAdoption.Shared.Enumerations
+﻿namespace PetAdoption.Shared.Enumerations;
+public enum Gender
 {
-    public enum Gender
-    {
-        Male = 0,
-        Female = 1
-    }
+    Male,
+    Female
 }
+

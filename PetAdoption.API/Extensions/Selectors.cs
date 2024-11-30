@@ -11,7 +11,7 @@ namespace PetAdoption.API.Extensions
 			p => new PetListDto
 			{
 				Id = p.Id,
-                Breed = p.Breed,
+                Breed = p.Breed ?? string.Empty,
 				Image = $"{AppConstants.BaseApiUrl}/images/pets/{p.Image}",
 				Name = p.Name,
 				Price = p.Price
