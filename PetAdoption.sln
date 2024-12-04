@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetAdoption.API", "PetAdopt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetAdoption.Shared", "PetAdoption.Shared\PetAdoption.Shared.csproj", "{EF89A126-14BD-4FDF-BFB4-9449500C610B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetAdoption.Client", "PetAdoption.Client\PetAdoption.Client.csproj", "{BD89AB0B-38A8-4B23-871B-FDAC090FA9E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +30,10 @@ Global
 		{EF89A126-14BD-4FDF-BFB4-9449500C610B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF89A126-14BD-4FDF-BFB4-9449500C610B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF89A126-14BD-4FDF-BFB4-9449500C610B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD89AB0B-38A8-4B23-871B-FDAC090FA9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD89AB0B-38A8-4B23-871B-FDAC090FA9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD89AB0B-38A8-4B23-871B-FDAC090FA9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD89AB0B-38A8-4B23-871B-FDAC090FA9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
