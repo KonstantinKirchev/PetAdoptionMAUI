@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
 
         // Check if onboarding screen shown
         if (Preferences.Default.ContainsKey(UIConstants.OnboardingShown))
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            await Shell.Current.GoToAsync($"//{nameof(LoginRegisterPage)}");
         else
             await Shell.Current.GoToAsync($"//{nameof(OnboardingPage)}");
     }
