@@ -73,8 +73,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Models\" />
-	  <Folder Include="Services\" />
+	  <ProjectReference Include="..\PetAdoption.Shared\PetAdoption.Shared.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

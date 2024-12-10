@@ -16,7 +16,18 @@ namespace PetAdoption.Client
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
+            RegisterAppDependencies(builder.Services);
             return builder.Build();
+        }
+
+        static void RegisterAppDependencies(IServiceCollection services)
+        {
+            services.AddTransient<LoginRegisterViewModel>()
+                    .AddTransient<LoginRegisterPage>()
+                    //.AddTransient<AuthService>()
+                    //.AddSingleton<CommonService>()
+                    //.AddSingleton<HomeViewModel>()
+                    .AddSingleton<HomePage>();
         }
     }
 }
