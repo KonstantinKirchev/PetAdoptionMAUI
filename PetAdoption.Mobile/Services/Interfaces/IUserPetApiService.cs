@@ -1,5 +1,4 @@
-﻿using PetAdoption.Shared.Dtos;
-using Refit;
+﻿using Refit;
 
 namespace PetAdoption.Mobile.Services.Interfaces
 {

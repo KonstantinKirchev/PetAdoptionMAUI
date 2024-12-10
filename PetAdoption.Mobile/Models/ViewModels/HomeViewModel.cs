@@ -1,5 +1,4 @@
-﻿using PetAdoption.Mobile.Services.Interfaces;
-using Refit;
+﻿using Refit;
 
 namespace PetAdoption.Mobile.Models.ViewModels
 {

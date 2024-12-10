@@ -1,5 +1,4 @@
 ﻿using PetAdoption.Mobile.Services.Interfaces;
-using PetAdoption.Shared.Dtos;
 
 namespace PetAdoption.Mobile.Services
 {

@@ -1,6 +1,4 @@
-﻿using PetAdoption.Mobile.Services.Interfaces;
-
-namespace PetAdoption.Mobile.Models.ViewModels
+﻿namespace PetAdoption.Mobile.Models.ViewModels
 {
 	[QueryProperty(nameof(IsFirstTime), nameof(IsFirstTime))]
 	public partial class LoginRegisterViewModel : BaseViewModel

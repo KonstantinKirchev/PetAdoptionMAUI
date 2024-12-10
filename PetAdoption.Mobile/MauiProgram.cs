@@ -2,7 +2,6 @@
 using CommunityToolkit.Maui;
 using Refit;
 using PetAdoption.Shared;
-using PetAdoption.Mobile.Services.Interfaces;
 
 namespace PetAdoption.Mobile;
 
